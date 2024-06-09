@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import Button from '@/components/Button'
+import { createItem } from '@/actions'
 
 const prisma = new PrismaClient()
 
@@ -13,7 +14,7 @@ export default async function Home() {
 					<li key={item.id}>{item.title}</li>
 				))}
 			</ul>
-			<Button />
+			<Button createItem={createItem} />
 		</div>
 	)
 }

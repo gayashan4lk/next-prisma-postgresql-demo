@@ -1,9 +1,10 @@
 'use client'
 
-export default function Button() {
+
+export default function Button({ createItem }: { createItem: any }) {
 	return (
 		<button onClick={() => {
-			console.log('button clicked')
+			createItem()
 		}} className="font-sans font-bold p-2 bg-sky-500 text-white rounded">Execute</button>
 	)
 }
